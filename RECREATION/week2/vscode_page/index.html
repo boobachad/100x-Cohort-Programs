@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            /*alternative to flex jsutify center*/
+            background-color: red;
+        }
+
+        .content {
+            height: 500px;
+        }
+
+        .con {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .left {
+            background-color: red;
+            flex-grow: 1;
+        }
+
+        .right {
+            background-color: blue;
+            flex-grow: 2;
+        }
+
+
+        /* grid alternative to above flex grow */
+        .connn {
+            width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+            gap: 10px;
+        }
+
+        .top {
+            background-color: red;
+        }
+
+        .bottom {
+            background-color: blue;
+        }
+
+        /* more complicated grid */
+        .condi {
+            width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+
+        .horizontal-center {
+            margin: auto;
+        }
+
+        .grid1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Hello world</h1>
+        </div>
+    </div>
+    <div class="con" style="padding: 24px;">
+        <div class="left">
+            <h1>left</h1>
+        </div>
+        <div class="right">
+            <h1>right</h1>
+        </div>
+    </div>
+    <!-- /* grid alternative to above flex grow */ -->
+    <div class="connn" style="padding: 24px;">
+        <div class="top">
+            <h1>top</h1>
+        </div>
+        <div class="bottom">
+            <h1>bottom</h1>
+        </div>
+    </div>
+
+    <!-- /* more complicated grid */ -->
+
+    <div class="condi" style="padding: 24px;">
+        <div class="leftt">
+            <div>
+                <div class="horizontal-center">
+                    <h1>left</h1>
+                </div>
+                <div>
+                    <h3>text text text text text text text text text</h3>
+                </div>
+            </div>
+        </div>
+        <div class="rightt">
+            <div class="grid1">
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+                <h2>col 1</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
