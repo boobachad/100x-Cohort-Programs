@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <input type="text"></input>
+    <button onclick="addTodo">Add todo</button>
+
+    <script>
+        function addTodo() {
+            const inputEle = document.querySelector("input");
+            const value = inputEle.value;
+
+            const newDivEle = document.createElement("div");
+            newDivEle.innerHTML = "<div>go to gym</div><button>delete</button>";
+        }
+
+        function deleteTodo(index) {
+
+        }
+    </script>
+</body>
+
+</html>

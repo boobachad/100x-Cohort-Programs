@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .hello {
+            background-color: yellow;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>To do list</h1>
+    <div>
+        <div id="todo1" style="display: flex;">
+            <h4>take calss</h4>
+            <button onclick="deleteTodo(1)">delete</button>
+        </div>
+        <div id="todo2" style="display: flex;">
+            <h4>good</h4>
+            <button onclick="deleteTodo(2)">delete</button>
+        </div>
+        <div id="todo3" style="display: flex;">
+            <h4>go anywhere</h4>
+            <button onclick="deleteTodo(3)">delete</button>
+        </div>
+    </div>
+    <div>
+        <input type="text"></input>
+        <button id="btn">add todo</button>
+    </div>
+
+    <script>
+        const inputEl = document.querySelector("input");
+        console.log(inputEl);
+        console.log(inputEl.value);
+        console.log(document.querySelector("button").innerHTML);
+        //what does inner html do?
+        // it selects the contnet inside the particualr query
+        console.log(document.querySelector("input").value);
+        // and what does .value do?
+        // it selects the value of it
+        // to select all the queries
+        // we use querySelectorAll
+        console.log(document.querySelector("h4"));
+        console.log(document.querySelectorAll("h4"));
+        console.log(document.querySelectorAll("h4")[1]);
+        console.log(document.querySelector("#todo1"));
+        // all though the query selector is more than enough
+        // but getelementby class or id is also good
+
+        // new
+        // setinerval-every 1 sec ifinitely v/s settimeout after 1 sec
+        // let ctr = 0;
+
+        // function callback() {
+        //     document.querySelectorAll("h4")[1].innerHTML = ctr;
+        //     ctr += 1;
+        // }
+        // setInterval(callback, 1000);
+
+        function deleteTodo(index) {
+            const element = document.getElementById("todo" + index);
+            element.parentNode.removeChild(element);
+        }
+        // so what we have leanr so far
+        // we learnt to update how? by innerHTML=""
+        // we hvae learnt to delete how? removeChild
+        
+    </script>
 </body>
+
 </html>
