@@ -1,0 +1,18 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+    <script>
+        function sendRequest() {
+            axios.post("http://localhost:3007/something", {
+                a: document.getElementById("a").value,
+                b: document.getElementById("b").value
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="first value" id="a">
+    <input type="text" id="b" placeholder="2nd value">
+
+    <button onclick="sendRequest()">Find sum</button>
+</body>
