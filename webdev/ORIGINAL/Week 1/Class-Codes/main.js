@@ -78,7 +78,7 @@ for(let i = 0; i < allUsers.length; i++){
 function sum(a, b){
     const sumValue = a + b;
     return sumValue;
-}
+}   
 
 const value = sum(1, 2);
 console.log(value); //prints 3
